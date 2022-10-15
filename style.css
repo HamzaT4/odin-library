@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    background-color: #f0eef1;;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+   
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: #94a3b8;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+   padding: 1rem;
+}
+.inputs{
+    top: 35vh;
+    left: 40vw;
+    position: absolute;
+    opacity: 0.2;
+    transform: scale(0);
+    width: 20vw;
+    background-color: #e2e8f0;
+    align-self: center;
+    transition: transform .3s ease-in-out, opacity 0.4s ease;
+    overflow: hidden;
+    padding: 0.5rem;
+    border-radius: 20px;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    
+}
+input{
+    max-width: 17vw;
+}
+button{
+    border-radius: 20px;
+    border: 0;
+    font-weight: 600;
+    padding: 0.5rem;
+    background-color: #64748b;
+}
+.inputs.show{
+    opacity: 1;
+    transform: scale(1);
+    
+}
+hr{
+    border: 1px solid black;
+}
+
+.backdrop {
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    background: #000;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+  }
+  .backdrop.show{
+    opacity: 0.3;
+    pointer-events:all;
+  }
+  .add-btn{
+   align-self: center;
+   background-color: #64748b;
+    
+  }
+  h3{
+    padding-left: 1rem;
+  }
+
+  .books-container{
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding-inline: 1rem;
+    gap: 1rem;
+  }
+
+  .book-card{
+    background-color: #cbd5e1;
+    padding: 0.5rem;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+
+
+  }
+  .done-btn{
+    background-color: #d9f99d;
+    width: 80%;
+  }
+  .not-btn{
+    background-color: rgb(197, 66, 66);
+    width: 80%;
+  }
