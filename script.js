@@ -33,12 +33,16 @@ document.addEventListener('keydown',(e)=>{
 
 )
 
-function bookConstructor(title,author,pages,read) {
-  this.title = title;
-  this.author= author;
-  this.pages= pages;
-  this.read= Boolean(read);
-  this.info = ()=> `${this.title} is written by  ${this.author} with ,${this.pages} pages and ${this.read}`;
+class bookConstructor {
+    constructor(title,author,pages,read){
+        this.title = title;
+        this.author= author;
+        this.pages= pages;
+        this.read= Boolean(read);
+
+    }
+
+  info = ()=> `${this.title} is written by  ${this.author} with ,${this.pages} pages and ${this.read}`;
 }
 
 addBookButton.addEventListener('click',addBook);
